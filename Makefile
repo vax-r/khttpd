@@ -23,6 +23,9 @@ htstress: htstress.c
 check: all
 	@scripts/test.sh
 
+plot:
+	gnuplot scripts/bench.gp
+
 clean:
 	make -C $(KDIR) M=$(PWD) clean
 	$(RM) htstress
